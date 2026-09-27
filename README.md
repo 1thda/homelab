@@ -20,3 +20,6 @@ Each script lists its own dependencies at the top (makemkvcon, HandBrakeCLI, ffm
 
 Notes
 These are pulled from a larger personal server setup and trimmed to the generically useful parts. They assume a fairly standard /mnt/media-style library layout (Movies/<Title> (<Year>)/, TV/<Show>/Season NN/) but every path is overridable.
+
+License
+MIT — see LICENSE.
