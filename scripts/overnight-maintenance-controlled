@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+exec systemd-run --user --wait --collect --unit=overnight-maintenance \
+  -p Nice=19 -p IOSchedulingClass=idle -p CPUWeight=10 -p CPUQuota=100% \
+  -p MemoryHigh=2G -p MemorySwapMax=0 \
+  /home/thane/scripts/overnight-maintenance.sh
